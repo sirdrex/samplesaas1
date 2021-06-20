@@ -1,0 +1,14 @@
+{
+    "role": {
+        "name": "SAMPLESAAS1_DB_EXTERNAL_ACCESS",
+        "object_privileges": [
+            {
+                "name": "SAMPLESAAS1_DB_WIDGETS",
+                "type": "TABLE",
+                "privileges": [
+                    "SELECT"
+                ]
+            }
+        ]
+    }
+}
