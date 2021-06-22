@@ -41,7 +41,7 @@ modules:
       memory: 256M
       disk-quota: 1024M
     properties:
-      TENANT_HOST_PATTERN: '^(.*)-${space}-${app-name}.${default-domain}'
+      TENANT_HOST_PATTERN: '^(.*)-devsubs-${app-name}.${default-domain}'
     requires:
       - name: samplesaas1-uaa
       - name: srv-api
@@ -67,7 +67,7 @@ resources:
       service: xsuaa
       service-plan: application
       path: ./xs-security.json
-      xsuaa-app: ${space}-~{app_api/application}
+      xsuaa-app: devsubs-~{app_api/application}
       config:
         xsappname: ${xsuaa-app}
     properties:
@@ -96,7 +96,7 @@ resources:
         description: 'Business Application'
         category: 'SaaS Multitenant Apps'
         appUrls:
-          onSubscription: https://org-a96be691trial-${space}-samplesaas1-srv.${default-domain}/mtx/v1/provisioning/tenant/{tenantId}
+          onSubscription: https://ORG_a96be691trial-devsubs-samplesaas1-srv.${default-domain}/mtx/v1/provisioning/tenant/{tenantId}
 
   # ------------------- SERVICE MANAGER SERVICE ----------------
   - name: samplesaas1-sm
